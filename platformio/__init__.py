@@ -17,7 +17,7 @@ import sys
 VERSION = (2, 11, "1.dev1")
 __version__ = ".".join([str(s) for s in VERSION])
 
-__title__ = "platformio"
+__title__ = "arduinosdk"
 __description__ = (
     "An open source ecosystem for IoT development. "
     "Cross-platform build system and library manager. "

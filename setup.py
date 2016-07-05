@@ -54,8 +54,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "pio = platformio.__main__:main",
-            "platformio = platformio.__main__:main"
+            "arduino = platformio.__main__:main"
         ]
     },
     classifiers=[
