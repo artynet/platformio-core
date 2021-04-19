@@ -1,0 +1,6 @@
+# some long lines can't be broken properly
+platformio: manpage-has-errors-from-man usr/share/man/man1/platformio.1.gz * cannot adjust line
+
+# dot directory is part of the template for IDE
+platformio: package-contains-python-dot-directory usr/lib/python3/dist-packages/platformio/ide/tpls/eclipse/.settings/
+platformio: package-contains-python-dot-directory usr/lib/python3/dist-packages/platformio/ide/tpls/vscode/.vscode/
