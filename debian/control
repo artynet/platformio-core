@@ -11,6 +11,8 @@ Build-Depends:
  python3-docutils,
  python3-sphinx,
  python3-sphinx-rtd-theme,
+ python3-sphinx-notfound-page,
+ python3-sphinx-copybutton,
  python3-pytest,
 Standards-Version: 4.5.0
 Testsuite: autopkgtest-pkg-python
@@ -23,6 +25,7 @@ Architecture: all
 Depends:
  ${python3:Depends},
  ${misc:Depends},
+ python3-click,
 Suggests:
   platformio-doc
 Description: open source ecosystem for IoT development
