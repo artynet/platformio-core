@@ -1,0 +1,6 @@
+0001-remove-scripts-from-setup.py.patch
+0002-telemetry-off.patch
+0003-local-bootstrap.min.js.patch
+#0004-split-long-line-for-lintian.patch
+0005-remove-.gitignore-from-examples.patch
+0006-disable-upgrade.patch

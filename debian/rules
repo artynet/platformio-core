@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+export PYBUILD_VERBOSE = 1
+
+export PYBUILD_NAME = platformio
+export PYBUILD_DESTDIR = debian/$(PYBUILD_NAME)
+
+%:
+	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_build:
+	dh_auto_build
+	PYTHONPATH=. python3 -m sphinx -j auto -N -bhtml docs/ build/html # HTML generator
+	PYTHONPATH=. python3 -m sphinx -j auto -N -bman docs/ build/man # Manpage generator
+	# _static/images have been copied to _images directory with command above, lintian warns with duplicate files so remove them
+	rm -rf build/html/_static/images
+
+# Most of the test are trying to download remote files (build environments for IoT)
+# therefore disabled.
+override_dh_auto_test:
+	true
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf build
+	rm -rf *.egg-info
