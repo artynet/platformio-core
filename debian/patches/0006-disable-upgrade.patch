@@ -1,0 +1,25 @@
+From: Peter Zahradnik <peter.zahradnik@znik.sk>
+Date: Tue, 28 Jul 2020 13:24:20 +0100
+Subject: disable upgrade
+
+---
+ platformio/commands/upgrade.py | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/platformio/commands/upgrade.py b/platformio/commands/upgrade.py
+index 6303ea6..e9f4469 100644
+--- a/platformio/commands/upgrade.py
++++ b/platformio/commands/upgrade.py
+@@ -28,6 +28,12 @@ from platformio.project.helpers import get_project_cache_dir
+ @click.command("upgrade", short_help="Upgrade PlatformIO to the latest version")
+ @click.option("--dev", is_flag=True, help="Use development branch")
+ def cli(dev):
++    raise exception.UpgradeError(
++        """You can't upgrade with this command because PlatformIO
++        was installed from debian package. If needed please uninstall first
++        with "apt remove" and follow link bellow to install manually"""
++    )
++
+     if not dev and __version__ == get_latest_version():
+         return click.secho(
+             "You're up-to-date!\nPlatformIO %s is currently the "
