@@ -1,0 +1,27 @@
+platformio (6.1.4-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Peter Záhradník <peter.zahradnik@znik.sk>  Mon, 19 Sep 2022 14:58:31 +0000
+
+platformio (5.1.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Peter Záhradník <peter.zahradnik@znik.sk>  Mon, 19 Apr 2021 14:33:52 +0000
+
+platformio (4.3.4-1) unstable; urgency=medium
+
+  * New upstream version 4.3.4
+  * Move from subtrees to submodules
+  * debian/gbp.conf: submodules=True
+  * debian/control: change email for python-apps-team email list
+  * Build with --changes-option=-S (Closes: #965039)
+
+ -- Peter Záhradník <peter.zahradnik@znik.sk>  Tue, 28 Jul 2020 20:41:59 +0100
+
+platformio (4.2.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #921347)
+
+ -- Peter Záhradník <peter.zahradnik@znik.sk>  Sun, 15 Mar 2020 13:51:47 +0000
