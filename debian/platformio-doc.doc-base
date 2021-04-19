@@ -1,0 +1,9 @@
+Document: platformio
+Title: PlatformIO Documentation
+Author: PlatformIO
+Abstract: This documentation describes what PlatformIO is, and how it can be used.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/platformio/html/index.html
+Files: /usr/share/doc/platformio/html/*.html

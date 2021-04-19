@@ -1,0 +1,29 @@
+From: Peter Zahradnik <peter.zahradnik@znik.sk>
+Date: Tue, 28 Jul 2020 00:06:02 +0100
+Subject: remove scripts from setup.py
+
+---
+ setup.py | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index 6472eadb..215be408 100644
+--- a/setup.py
++++ b/setup.py
+@@ -52,7 +52,7 @@ setup(
+         [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*", "!=3.3.*", "!=3.4.*"]
+     ),
+     install_requires=install_requires,
+-    packages=find_packages(exclude=["tests.*", "tests"]) + ["scripts"],
++    packages=find_packages(exclude=["tests.*", "tests"]),
+     package_data={
+         "platformio": [
+             "ide/tpls/*/.*.tpl",
+@@ -60,7 +60,6 @@ setup(
+             "ide/tpls/*/*/*.tpl",
+             "ide/tpls/*/.*/*.tpl",
+         ],
+-        "scripts": ["99-platformio-udev.rules"],
+     },
+     entry_points={
+         "console_scripts": [

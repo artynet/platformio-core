@@ -1,0 +1,56 @@
+Source: platformio
+Section: electronics
+Priority: optional
+Maintainer: Python Applications Packaging Team <python-apps-team@alioth-lists.debian.net>
+Uploaders: Peter Záhradník <peter.zahradnik@znik.sk>
+Build-Depends:
+ debhelper-compat (= 12),
+ dh-python,
+ python3-all,
+ python3-setuptools,
+ python3-docutils,
+ python3-sphinx,
+ python3-sphinx-rtd-theme,
+ python3-pytest,
+Standards-Version: 4.5.0
+Testsuite: autopkgtest-pkg-python
+Homepage: https://platformio.org
+Vcs-Git: https://salsa.debian.org/python-team/applications/platformio.git
+Vcs-Browser: https://salsa.debian.org/python-team/applications/platformio
+
+Package: platformio
+Architecture: all
+Depends:
+ ${python3:Depends},
+ ${misc:Depends},
+ python3-click,
+Suggests:
+  platformio-doc
+Description: open source ecosystem for IoT development
+ PlatformIO Core is a heart of whole PlatformIO ecosystem.
+ This is a Command Line Tool that consists of multi-platform build system,
+ platform and library managers and other integration components.
+ .
+ Features:
+  * Multi-platform Build System
+  * Development platform and package managers
+  * Library Manager
+  * Library Dependency Finder (LDF)
+  * Serial Port Monitor
+  * Integration components (Cloud & Desktop IDE and Continuous Integration).
+
+Package: platformio-doc
+Architecture: all
+Section: doc
+Depends:
+ ${sphinxdoc:Depends},
+ ${misc:Depends},
+ libjs-bootstrap,
+ sphinx-rtd-theme-common,
+Suggests:
+  www-browser,
+Description: PlatformIO (common documentation)
+ This package contains documentation to PlatfomrIO, an open source
+ ecosystem for IoT development
+ .
+ This is the common documentation package
