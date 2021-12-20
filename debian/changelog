@@ -1,3 +1,9 @@
+platformio (5.2.4-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Peter Záhradník <peter.zahradnik@znik.sk>  Mon, 20 Dec 2021 16:13:50 +0000
+
 platformio (5.2.0-1) unstable; urgency=medium
 
   * New upstraem version.
